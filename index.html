@@ -1,0 +1,160 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>HandiApp</title>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="css/all.css" rel="stylesheet" type="text/css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="HandiApp, Assistance, Driving, Ford" name="keywords">
+        <meta content="HandiApp is designed to assist less able bodies to have the ability to go out in their car and be sure they have the assistance they require." name="description">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+            <div id="connect">
+                <div id="connect-ford"><img src="img/Ford_logo_flat.svg.png" alt="Ford Logo"></div>
+
+                <div id="connect-logo"><img src="img/HandiApp.svg" alt="HandiApp Logo"></div>
+
+                <div id="connect-car"><i class="fab fa-bluetooth"></i></div>
+            </div>
+
+
+            <script>
+                $("document").ready(function(){
+                   $("#connect-car").click(function(){
+                       $("#connect").fadeOut(1500);
+                   });
+                });
+            </script>
+
+            <div id="navigation">
+                <div id="journey"><i class="fas fa-map-marker-alt"></i><p>Journey</p></div>
+                <div id="control"><i class="fas fa-car"></i><p>Control</p></div>
+                <div id="features"><i class="fas fa-shapes"></i><p>Features</p></div>
+            </div>
+
+            <!-- Control Page -->
+
+            <div id="control-page">
+                <div class="logo-small">
+                    <img src="img/HandiApp.svg" alt="HandiApp Logo">
+                </div>
+                <div id="focus-display">
+                    <img id="focus-top" src="img/Focus-top-view.png" alt="Ford Focus birds eye view">
+                </div>
+                <div id="control-status">
+                    <div class="status-wrap">
+                        <div class="status-icon">
+                            <i class="fas fa-gas-pump"></i>
+                            <p>Fuel</p>
+                        </div>
+                        <div class="status-report">
+                            <div id="fuel-tank"><div id="tank-status"></div></div>
+                            <p>248 mi</p>
+                        </div>
+                    </div>
+                    <div class="status-wrap">
+                        <div class="status-icon">
+                            <i class="fas fa-power-off"></i>
+                            <p>Engine</p>
+                        </div>
+                        <div class="status-report">
+                            <p>OFF <i class="fas fa-chevron-right"></i></p>
+                        </div>
+                    </div>
+                    <div class="status-wrap">
+                        <div class="status-icon">
+                            <i class="fas fa-lock"></i>
+                            <p>Doors</p>
+                        </div>
+                        <div class="status-report">
+                            <p>LOCKED <i class="fas fa-chevron-right"></i></p>
+                        </div>
+                    </div>
+                    <div id="ford-news">
+                        <h2>Keep up with the latest ford news</h2>
+                        <rssapp-wall id="gYOqz844WlP6XM8x"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+                    </div>
+                </div>
+            </div>
+
+            <div id="journey-page">
+                <div class="logo-small">
+                    <img src="img/HandiApp.svg" alt="HandiApp Logo">
+                </div>
+                <div id="map-wrap">
+                    <div id="map-head">
+                        <div id="input-cont">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search...">    
+                        </div>
+                        <div id="speaker-icons">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                    </div>
+                    <div id="speedo">
+                        <div>
+                            <p id="speed">25</p>
+                            <p id="unit">MPH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="features-page">
+                <div class="logo-small">
+                    <img src="img/HandiApp.svg" alt="HandiApp Logo">
+                </div>
+                <div id="feature-scroll">
+                    <div class="feature-container">
+                        <i id="urgent" class="fas fa-phone-volume"></i>
+                        <div class="feature-desc">
+                            <h2>SOS</h2>
+                            <h3>Request Emergancy Assistance</h3>
+                        </div>
+                    </div>
+                    <div class="feature-container">
+                        <i class="fas fa-hands-helping"></i>
+                        <div class="feature-desc">
+                            <h2>Refuel</h2>
+                            <h3>Request Assistance</h3>
+                        </div>
+                    </div>
+                    <div class="feature-container">
+                        <i class="fas fa-car"></i>
+                        <div class="feature-desc">
+                            <h2>Summon</h2>
+                            <h3>Request Vehicle</h3>
+                        </div>
+                    </div>
+                    <div class="feature-container">
+                        <i class="fas fa-temperature-low"></i>
+                        <div class="feature-desc">
+                            <h2>Temperature</h2>
+                            <div id="temp-guage">
+                                <i id="temp-left" class="fas fa-arrow-left"></i>
+                                <p id="temp-var">21&#8451;</p>
+                                <i id="temp-right" class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </body>
+</html>

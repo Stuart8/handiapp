@@ -1,0 +1,445 @@
+body{
+    margin: 0;
+}
+
+#wrapper{
+    background: linear-gradient(180deg, #1FA2F2 0%, #115F8E 100%);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#connect{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(180deg, #1FA2F2 0%, #115F8E 100%);
+    z-index: 1000;
+}
+
+#connect-ford{
+    width: 150px;
+    opacity: 0.15;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#connect-ford img{
+    width: 100%;
+}
+
+#connect-logo{
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#connect-car{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#connect-car i{
+    color: #fff;
+    font-size: 30px;
+}
+
+#connect-car::after{
+    content: "connect to car";
+    font-size: 20px;
+    color: #fff;
+    font-family: roboto;
+    text-transform: uppercase;
+}
+
+#navigation{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    box-shadow: -1px -3px 20px 0px #313131;
+    overflow: hidden;
+    padding-top: 10px;
+    z-index: 999;
+    background: linear-gradient(180deg, #1FA2F2 0%, #115F8E 100%);
+}
+
+#journey{
+    width: 33.333%;
+    height: 50px;
+    float: left;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+#journey p{
+    font-size: 10px;
+    margin: 0;
+    font-family: roboto;
+}
+
+#control{
+    width: 33.333%;
+    height: 80px;
+    float: left;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+#control p{
+    font-size: 10px;
+    margin: 0;
+    font-family: roboto;
+}
+
+#features{
+    width: 33.333%;
+    height: 80px;
+    float: left;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+#features p{
+    font-size: 10px;
+    margin: 0;
+    font-family: roboto;
+}
+
+
+.logo-small{
+    width: 70px;
+    margin: 10px;
+}
+.logo-small img{
+    width: 100%;
+}
+
+/* Control Page */
+
+#control-page{
+    height: 100vh;
+    position: relative;
+    display: none;
+}
+
+#focus-display{
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+}
+
+#focus-top{
+    position: absolute;
+    height: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+}
+
+#control-status{
+    height: 250px;
+    width: 100%;
+    background: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+.status-wrap{
+    margin-top: 20px;
+    width: 100%;
+    float: left;
+}
+
+.status-icon{
+    float: left;
+    height: 40px;
+    width: 50%;
+    font-family: roboto;
+}
+
+.status-icon i{
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    font-size: 40px;
+}
+
+.status-icon *{
+    float: left;
+    margin-left: 20px !important;
+}
+
+.status-icon p{
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0;
+}
+
+.status-report{
+    float: left;
+    height: 40px;
+    width: 50%;
+}
+
+.status-report p{
+    color: #868585;
+    font-family: roboto;
+}
+
+#fuel-tank{
+    width: 50%;
+    background: #C4C4C4;
+    height: 5px;
+    border-radius: 50px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+}
+
+#tank-status{
+    width: 80%;
+    background: #F2C213;
+    height: 5px;
+    border-radius: 50px;
+}
+
+.status-report p{
+    float: right;
+    line-height: 40px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+#ford-news{
+    margin-bottom: 100px;
+    float: left;
+    width: 100%;
+}
+
+#ford-news h2{
+    font-family: roboto;
+    text-align: center;
+    margin: 40px;
+}
+/* Journey Page */
+#journey-page{
+    width: 100%;
+    display: none;
+}
+
+#map-wrap{
+    height: calc(100vh - 70px);
+    width: 100%;
+    position: absolute;
+    background: url(../img/journey-map.PNG) no-repeat;
+    background-size: cover;
+}
+
+#map-head{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+}
+
+#input-cont{
+    border-radius: 20px;
+    border: 2px solid #919191;
+    background: rgba(189, 189, 189, 0.562);
+    float: left;
+    height: 25px;
+    margin: 10px;
+}
+
+#input-cont input{
+    box-sizing: border-box;
+    margin: 5px;
+    background: transparent;
+    border: none;
+    float: left;
+    width: 70px;
+}
+
+#input-cont i{
+    color: #919191;
+    line-height: 25px;
+    margin-left: 10px;
+    float: left;
+}
+
+#speaker-icons{
+    float: right;
+    height: 25px;
+    margin: 10px;
+}
+
+#speaker-icons i{
+    line-height: 25px;
+    font-size: 20px;
+}
+
+#speedo{
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    background: rgba(0, 0, 0, 0.863);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 60px;
+    margin: 30px 20px;
+    border: 5px dashed #919191;
+    text-align: center;
+}
+
+#speedo div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#speed{
+    width: 100%;
+    color: #fff;
+    font-family: roboto;
+    font-size: 30px;
+    margin: 0;
+    position: relative;
+}
+
+#unit{
+    width: 100%;
+    color: #fff;
+    font-family: roboto;
+    font-size: 20px;
+    margin: 0;
+}
+/* Features Page */
+#features-page{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#feature-scroll{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: scroll;
+    width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+.feature-container{
+    width: 100%;
+    margin: 20px 30px;
+    position: relative;
+    display: flex;
+    
+}
+
+#urgent{
+    background: #A61E1E;
+}
+
+.feature-container i{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: #5B1EA6;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    color: #1FA2F2;
+    float: left;
+}
+
+.feature-desc{
+    float: left;
+    color: #B4B4B4;
+    font-family: roboto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 60px;
+}
+
+.feature-desc h2{
+    font-size: 20px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.feature-desc h3{
+    font-size: 10px;
+    margin: 0;
+    margin-left: 10px;
+    font-weight: 100;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+
+.feature-desc h3::before{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #C4C4C4;
+    float: left;
+    margin-right: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#temp-guage{
+    display: flex;
+}
+
+#temp-var{
+    margin: 0 20px;;
+}
+
+#temp-left{
+    background: #B4B4B4;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+#temp-left i{
+    margin: 0;
+}
+
+#temp-right{
+    background: #B4B4B4;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+#temp-right i{
+    margin: 0;
+}
