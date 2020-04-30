@@ -34,33 +34,42 @@
             <script>
                 $("document").ready(function(){
                    $("#connect-car").click(function(){
-                       $("#connect").fadeOut(1500);
+                       $("#connect").fadeOut(1100);
                    });
                 });
             </script>
 
             <div id="navigation">
-                <div id="journey"><i class="fas fa-map-marker-alt"></i><p>Journey</p></div>
-                <div id="control"><i class="fas fa-car"></i><p>Control</p></div>
-                <div id="features"><i class="fas fa-shapes"></i><p>Features</p></div>
+                <div id="journey"><img id="journey-glow" src="img/navigation-glow.png" alt="active glow"><i class="fas fa-map-marker-alt"></i><p>Journey</p></div>
+                <div id="control"><img id="control-glow" src="img/navigation-glow.png" alt="active glow"><i class="fas fa-car"></i><p>Control</p></div>
+                <div id="features"><img id="features-glow" src="img/navigation-glow.png" alt="active glow"><i class="fas fa-shapes"></i><p>Features</p></div>
 
                 <script>
                     $("#journey").click(function(){
                         document.getElementById("journey-page").style.display = "block";
+                        document.getElementById("journey-glow").style.display = "block";
                         document.getElementById("control-page").style.display = "none";
+                        document.getElementById("control-glow").style.display = "none";
                         document.getElementById("features-page").style.display = "none";
+                        document.getElementById("features-glow").style.display = "none";
                     });
 
                     $("#control").click(function(){
                         document.getElementById("journey-page").style.display = "none";
+                        document.getElementById("journey-glow").style.display = "none";
                         document.getElementById("control-page").style.display = "block";
+                        document.getElementById("control-glow").style.display = "block";
                         document.getElementById("features-page").style.display = "none";
+                        document.getElementById("features-glow").style.display = "none";
                     });
 
                     $("#features").click(function(){
                         document.getElementById("journey-page").style.display = "none";
+                        document.getElementById("journey-glow").style.display = "none";
                         document.getElementById("control-page").style.display = "none";
+                        document.getElementById("control-glow").style.display = "none";
                         document.getElementById("features-page").style.display = "block";
+                        document.getElementById("features-glow").style.display = "block";
                     });
                 </script>
             </div>
