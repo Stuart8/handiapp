@@ -43,6 +43,26 @@
                 <div id="journey"><i class="fas fa-map-marker-alt"></i><p>Journey</p></div>
                 <div id="control"><i class="fas fa-car"></i><p>Control</p></div>
                 <div id="features"><i class="fas fa-shapes"></i><p>Features</p></div>
+
+                <script>
+                    $("#journey").click(function(){
+                        document.getElementById("journey-page").style.display = "block";
+                        document.getElementById("control-page").style.display = "none";
+                        document.getElementById("features-page").style.display = "none";
+                    });
+
+                    $("#control").click(function(){
+                        document.getElementById("journey-page").style.display = "none";
+                        document.getElementById("control-page").style.display = "block";
+                        document.getElementById("features-page").style.display = "none";
+                    });
+
+                    $("#features").click(function(){
+                        document.getElementById("journey-page").style.display = "none";
+                        document.getElementById("control-page").style.display = "none";
+                        document.getElementById("features-page").style.display = "block";
+                    });
+                </script>
             </div>
 
             <!-- Control Page -->
