@@ -239,10 +239,20 @@ body{
 }
 
 #tank-status{
-    width: 80%;
+    width: 0;
     background: #F2C213;
     height: 5px;
     border-radius: 50px;
+    animation: tank-read 4s ease-in-out;
+}
+
+@keyframes tank-read{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
 }
 
 .status-report p{
@@ -316,9 +326,15 @@ body{
     margin: 10px;
 }
 
-#speaker-icons i{
+#speaker-on{
     line-height: 25px;
     font-size: 20px;
+}
+
+#speaker-off{
+    line-height: 25px;
+    font-size: 20px;
+    display: none;
 }
 
 #speedo{

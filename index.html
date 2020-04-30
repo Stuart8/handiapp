@@ -71,6 +71,8 @@
                         document.getElementById("features-page").style.display = "block";
                         document.getElementById("features-glow").style.display = "block";
                     });
+
+
                 </script>
             </div>
 
@@ -130,7 +132,24 @@
                             <input type="text" placeholder="Search...">    
                         </div>
                         <div id="speaker-icons">
-                            <i class="fas fa-volume-up"></i>
+                            <i class="fas fa-volume-up" id="speaker-on"></i>
+                            <i class="fas fa-volume-mute" id="speaker-off"></i>
+
+                            <script>
+                                $("#speaker-icons").click(function(){
+
+                                    var on = document.getElementById("speaker-on");
+                                    var off = document.getElementById("speaker-off");
+
+                                    if (on.style.display === "none"){
+                                        on.style.display = "block";
+                                        off.style.display = "none";
+                                    } else {
+                                        on.style.display = "none";
+                                        off.style.display = "block";
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                     <div id="speedo">
