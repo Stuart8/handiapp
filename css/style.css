@@ -175,6 +175,39 @@ body{
     top: 25%;
 }
 
+#frdoor{
+    position: absolute;
+    height: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    display: none;
+}
+#fldoor{
+    position: absolute;
+    height: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    display: none;
+}
+#rrdoor{
+    position: absolute;
+    height: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    display: none;
+}
+#rldoor{
+    position: absolute;
+    height: 50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    display: none;
+}
+
 #swipe{
     position: absolute;
     left: 50%;
@@ -291,6 +324,8 @@ body{
 #ignition-status{
     display: none;
     width: 100%;
+    height: auto;
+    overflow: auto;
 }
 
 
@@ -301,7 +336,7 @@ body{
     padding: 10px 20px 10px 0;
     box-sizing: border-box;
     font-family: roboto;
-    background: rgb(189, 5, 5);
+    border-bottom: 1px solid #868585;
     opacity: 0.4;
 }
 
@@ -312,7 +347,45 @@ body{
     padding: 10px 20px 10px 0;
     box-sizing: border-box;
     font-family: roboto;
-    background: rgb(0, 160, 27);
+    border-bottom: 1px solid #868585;
+}
+
+#door-status{
+    display: none;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+#door-driver{
+    width: 100%;
+    float: left;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    border-bottom: 2px solid #868585;
+}
+
+#door-all{
+    width: 100%;
+    float: left;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    border-bottom: 2px solid #868585;
+}
+
+#door-lock{
+    width: 100%;
+    float: left;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    border-bottom: 1px solid #868585;
+    opacity: 0.4;
 }
 
 #ford-news{

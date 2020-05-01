@@ -85,7 +85,10 @@
                 </div>
                 <div id="focus-display">
                     <img id="focus-top" src="img/Focus-top-view.png" alt="Ford Focus birds eye view">
-                    <img id="focus-top" src="img/rear-right-door.png" alt="Ford Focus birds eye view">
+                    <img id="fldoor" src="img/front-left-door.png" alt="Ford Focus birds eye view">
+                    <img id="frdoor" src="img/front-right-door.png" alt="Ford Focus birds eye view">
+                    <img id="rldoor" src="img/rear-left-door.png" alt="Ford Focus birds eye view">
+                    <img id="rrdoor" src="img/rear-right-door.png" alt="Ford Focus birds eye view">
                 </div>
                 <div id="control-status">
 
@@ -161,7 +164,63 @@
                             <p>Doors</p>
                         </div>
                         <div class="status-report">
-                            <p>LOCKED <i class="fas fa-chevron-right"></i></p>
+                            <p id="remoteLock">LOCKED <i class="fas fa-chevron-right"></i></p>
+
+                            <div id="door-status">
+                                <div id="door-driver">DRIVER</div>
+                                <div id="door-all">ALL</div>
+                                <div id="door-lock">LOCK</div>
+                            </div>
+
+                            <script>
+                                var doorStatus = "LOCKED";
+
+                                $("#remoteLock").click(function(){
+                                    console.log(doorStatus);
+                                    $("#door-status").slideToggle();
+                                });
+
+                                $("#door-driver").click(function(){
+                                    console.log("Unlocking Driver Door")
+                                    doorStatus = "DRIVER";
+                                    $("#remoteLock").html(doorStatus + ' <i class="fas fa-chevron-right"></i>');
+                                    $("#door-driver").fadeTo("slow", 0.4);
+                                    $("#door-all").fadeTo("slow", 1);
+                                    $("#door-lock").fadeTo("slow", 1);
+                                    $("#frdoor").css('display', 'block');
+                                    $("#fldoor").css('display', 'none');
+                                    $("#rldoor").css('display', 'none');
+                                    $("#rrdoor").css('display', 'none');
+                                });
+
+                                $("#door-all").click(function(){
+                                    console.log("Unlocking All Doors")
+                                    doorStatus = "UNLOCKED";
+                                    $("#remoteLock").html(doorStatus + ' <i class="fas fa-chevron-right"></i>');
+                                    $("#door-driver").fadeTo("slow", 1);
+                                    $("#door-all").fadeTo("slow", 0.4);
+                                    $("#door-lock").fadeTo("slow", 1);
+                                    $("#frdoor").css('display', 'block');
+                                    $("#fldoor").css('display', 'block');
+                                    $("#rldoor").css('display', 'block');
+                                    $("#rrdoor").css('display', 'block');
+                                });
+
+                                $("#door-lock").click(function(){
+                                    console.log("Locking All Doors")
+                                    doorStatus = "LOCKED";
+                                    $("#remoteLock").html(doorStatus + ' <i class="fas fa-chevron-right"></i>');
+                                    $("#door-driver").fadeTo("slow", 1);
+                                    $("#door-all").fadeTo("slow", 1);
+                                    $("#door-lock").fadeTo("slow", 0.4);
+                                    $("#frdoor").css('display', 'none');
+                                    $("#fldoor").css('display', 'none');
+                                    $("#rldoor").css('display', 'none');
+                                    $("#rrdoor").css('display', 'none');
+                                });
+                            </script>
+
+
                         </div>
                     </div>
                     <div id="ford-news">
