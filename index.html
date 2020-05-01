@@ -86,6 +86,17 @@
                     <img id="focus-top" src="img/Focus-top-view.png" alt="Ford Focus birds eye view">
                 </div>
                 <div id="control-status">
+
+                    <div id="swipe">
+                        <i class="far fa-hand-point-up"></i>
+                    </div>
+
+                    <script>
+                        $("#control-status").click(function(){
+                            $("#swipe").hide();
+                        });
+                    </script>
+
                     <div class="status-wrap">
                         <div class="status-icon">
                             <i class="fas fa-gas-pump"></i>
@@ -116,7 +127,7 @@
                     </div>
                     <div id="ford-news">
                         <h2>Keep up with the latest ford news</h2>
-                        <rssapp-wall id="gYOqz844WlP6XM8x"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+                        <rssapp-wall id="gqw6LOEWwhDBgeNQ"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
                     </div>
                 </div>
             </div>
@@ -195,6 +206,34 @@
                                 <i id="temp-left" class="fas fa-arrow-left"></i>
                                 <p id="temp-var">21&#8451;</p>
                                 <i id="temp-right" class="fas fa-arrow-right"></i>
+
+                                <script>                                   
+                                    var temp = 21;
+                                    console.log("current temperature = " + temp);
+
+                                    $("#temp-left").click(function(){
+                                        if (temp >= 17){
+                                            temp--;
+                                            console.log(temp);
+                                            $('#temp-var').html(temp + "&#8451;");
+                                        } else {
+                                            alert("Temperature cannot go below 16");
+                                        }
+                                    });
+
+
+                                    $("#temp-right").click(function(){
+                                        if (temp <= 24){
+                                            temp++;
+                                            console.log(temp);
+                                            $('#temp-var').html(temp + "&#8451;");
+                                        } else {
+                                            alert("Temperature cannot go above 25");
+                                        }
+                                    });
+
+                                </script>
+
                             </div>
                         </div>
                     </div>
