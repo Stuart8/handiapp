@@ -1,5 +1,5 @@
 <!doctype HTML>
-<html>
+<html lang="en">
     <head>
         <title>HandiApp</title>
 
@@ -35,6 +35,7 @@
                 $("document").ready(function(){
                    $("#connect-car").click(function(){
                        $("#connect").fadeOut(1100);
+                       $("#control-page").show();
                    });
                 });
             </script>
@@ -84,6 +85,7 @@
                 </div>
                 <div id="focus-display">
                     <img id="focus-top" src="img/Focus-top-view.png" alt="Ford Focus birds eye view">
+                    <img id="focus-top" src="img/rear-right-door.png" alt="Ford Focus birds eye view">
                 </div>
                 <div id="control-status">
 
@@ -113,7 +115,44 @@
                             <p>Engine</p>
                         </div>
                         <div class="status-report">
-                            <p>OFF <i class="fas fa-chevron-right"></i></p>
+                            <p id="ignition">OFF <i class="fas fa-chevron-right"></i></p>
+                            <div id="ignition-status">
+                                <div id="engine-on">ON</div>
+                                <div id="engine-off">OFF</div>
+                            </div>
+                            <script>
+
+                                var engineStatus = "OFF";
+
+                                $("#ignition").click(function(){
+                                    $("#ignition-status").slideToggle();
+
+                                    console.log(engineStatus);
+
+                                    if (engineStatus == "OFF"){
+                                        console.log("Toggling Slide - Engine Currently OFF");
+                                    } else if (engineStatus == "ON"){
+                                        console.log("Toggling Slide - Engine Currently ON");
+                                    }
+                                });
+
+                                $("#engine-on").click(function(){
+                                    console.log("Starting Engine");
+                                    engineStatus = "ON";
+                                    $("#ignition").html(engineStatus + ' <i class="fas fa-chevron-right"></i>');
+                                    $("#engine-off").fadeTo("slow", 1);
+                                    $("#engine-on").fadeTo("slow", 0.4);
+                                });
+
+                                $("#engine-off").click(function(){
+                                    console.log("Turning Off Engine");
+                                    engineStatus = "OFF";
+                                    $("#ignition").html(engineStatus + ' <i class="fas fa-chevron-right"></i>');
+                                    $("#engine-on").fadeTo("slow", 1);
+                                    $("#engine-off").fadeTo("slow", 0.4);
+                                });
+                            </script>
+
                         </div>
                     </div>
                     <div class="status-wrap">
@@ -127,7 +166,7 @@
                     </div>
                     <div id="ford-news">
                         <h2>Keep up with the latest ford news</h2>
-                        <rssapp-wall id="gqw6LOEWwhDBgeNQ"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
+                        <rssapp-wall id="gqw6LOEWwhDBgeNQ"></rssapp-wall><script src="https://widget.rss.app/v1/wall.js" async></script>
                     </div>
                 </div>
             </div>

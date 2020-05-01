@@ -157,6 +157,7 @@ body{
 #control-page{
     height: 100vh;
     position: relative;
+    display: none;
 }
 
 #focus-display{
@@ -219,7 +220,7 @@ body{
 
 .status-icon{
     float: left;
-    height: 40px;
+    height: 50px;
     width: 50%;
     font-family: roboto;
 }
@@ -228,6 +229,7 @@ body{
     color: transparent;
     -webkit-text-stroke: 2px black;
     font-size: 40px;
+    line-height: 50px;
 }
 
 .status-icon *{
@@ -237,19 +239,16 @@ body{
 
 .status-icon p{
     font-size: 20px;
-    line-height: 40px;
+    line-height: 50px;
     margin: 0;
 }
 
 .status-report{
     float: left;
-    height: 40px;
+    height: auto;
+    overflow: auto;
     width: 50%;
-}
-
-.status-report p{
-    color: #868585;
-    font-family: roboto;
+    position: relative;
 }
 
 #fuel-tank{
@@ -257,7 +256,7 @@ body{
     background: #C4C4C4;
     height: 5px;
     border-radius: 50px;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     float: left;
@@ -281,10 +280,39 @@ body{
 }
 
 .status-report p{
+    color: #868585;
+    font-family: roboto;
     float: right;
-    line-height: 40px;
+    line-height: 50px;
     margin: 0;
     margin-right: 20px;
+}
+
+#ignition-status{
+    display: none;
+    width: 100%;
+}
+
+
+#engine-off{
+    width: 100%;
+    float: left;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    background: rgb(189, 5, 5);
+    opacity: 0.4;
+}
+
+#engine-on{
+    width: 100%;
+    float: left;
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    background: rgb(0, 160, 27);
 }
 
 #ford-news{
