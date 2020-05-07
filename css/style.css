@@ -95,6 +95,17 @@ body{
     display: none;
 }
 
+@media (min-width: 721px) and (min-height: 524px) and (orientation: landscape){
+    #navigation{
+        top: 20px;
+        background: transparent;
+        box-shadow: none;
+        right: 10px;
+        width: 300px;
+        padding-top: 0;
+    }
+}
+
 #journey{
     width: 33.333%;
     height: 80px;
@@ -399,6 +410,7 @@ body{
     text-align: center;
     margin: 40px;
 }
+
 /* Journey Page */
 #journey-page{
     width: 100%;
@@ -652,4 +664,80 @@ body{
 
 #temp-right i{
     margin: 0;
+}
+
+@media (min-width: 721px) and (min-height: 524px) and (orientation: landscape){
+    #control-status{
+        width: 350px;
+        right: 0;
+    }
+
+    #focus-display{
+        height: 100vh;
+    }
+
+    #focus-top{
+        height: 100vh;
+        top: 0;
+        left: 20%;
+    }
+
+    #fldoor{
+        height: 100vh;
+        top: 0;
+        left: 20%;
+    }
+
+    #frdoor{
+        height: 100vh;
+        top: 0;
+        left: 20%;
+    }
+
+    #rldoor{
+        height: 100vh;
+        top: 0;
+        left: 20%;
+    }
+
+    #rrdoor{
+        height: 100vh;
+        top: 0;
+        left: 20%;
+    }
+
+    #feature-scroll{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .feature-container{
+        width: 50%;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .feature-container i{
+        font-size: 70px;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .feature-desc{
+        left: 120px;
+    }
+
+    .feature-desc h2{
+        font-size: 40px;
+    }
+
+    .feature-desc h3{
+        font-size: 20px;
+    }
+
 }

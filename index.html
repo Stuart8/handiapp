@@ -5,9 +5,8 @@
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="css/all.css" rel="stylesheet" type="text/css">
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
+        <link rel="icon" type="image/svg" href="/img/HandiApp.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <meta content="HandiApp, Assistance, Driving, Ford" name="keywords">
@@ -145,6 +144,8 @@
                                     $("#ignition").html(engineStatus + ' <i class="fas fa-chevron-right"></i>');
                                     $("#engine-off").fadeTo("slow", 1);
                                     $("#engine-on").fadeTo("slow", 0.4);
+                                    var snd = new Audio("/audio/vehicle-startup" + ".mp3");
+                                    snd.play();
                                 });
 
                                 $("#engine-off").click(function(){
@@ -284,21 +285,21 @@
                     <img src="img/HandiApp.svg" alt="HandiApp Logo">
                 </div>
                 <div id="feature-scroll">
-                    <div class="feature-container">
+                    <div class="feature-container" id="sos-click">
                         <i id="urgent" class="fas fa-phone-volume"></i>
                         <div class="feature-desc">
                             <h2>SOS</h2>
                             <h3>Request Emergancy Assistance</h3>
                         </div>
                     </div>
-                    <div class="feature-container">
+                    <div class="feature-container" id="refuel-click">
                         <i class="fas fa-hands-helping"></i>
                         <div class="feature-desc">
                             <h2>Refuel</h2>
                             <h3>Request Assistance</h3>
                         </div>
                     </div>
-                    <div class="feature-container">
+                    <div class="feature-container" id="summon-click">
                         <i class="fas fa-car"></i>
                         <div class="feature-desc">
                             <h2>Summon</h2>
@@ -314,7 +315,23 @@
                                 <p id="temp-var">21&#8451;</p>
                                 <i id="temp-right" class="fas fa-arrow-right"></i>
 
-                                <script>                                   
+                                <script>      
+
+                                $("#sos-click").click(function(){
+                                    var snd = new Audio("/audio/emergancy" + ".mp3");
+                                    snd.play();
+                                });
+
+                                $("#refuel-click").click(function(){
+                                    var snd = new Audio("/audio/vehicle-refuel" + ".mp3");
+                                    snd.play();
+                                });
+
+                                $("#summon-click").click(function(){
+                                    var snd = new Audio("/audio/vehicle-summon" + ".mp3");
+                                    snd.play();
+                                });
+
                                     var temp = 21;
                                     console.log("current temperature = " + temp);
 
@@ -328,6 +345,74 @@
                                         }
                                     });
 
+                                    $("#temp-left").click(function(){
+                                        if (temp == 16){
+                                            var snd = new Audio("/audio/16-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 17){
+                                            var snd = new Audio("/audio/17-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 18){
+                                            var snd = new Audio("/audio/18-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 19){
+                                            var snd = new Audio("/audio/19-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 20){
+                                            var snd = new Audio("/audio/20-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 21){
+                                            var snd = new Audio("/audio/21-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 22){
+                                            var snd = new Audio("/audio/22-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 23){
+                                            var snd = new Audio("/audio/23-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 24){
+                                            var snd = new Audio("/audio/24-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 25){
+                                            var snd = new Audio("/audio/25-degrees" + ".mp3");
+                                    snd.play();
+                                        }
+                                    });
+
+                                    $("#temp-right").click(function(){
+                                        if (temp == 16){
+                                            var snd = new Audio("/audio/17-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 17){
+                                            var snd = new Audio("/audio/18-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 18){
+                                            var snd = new Audio("/audio/19-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 19){
+                                            var snd = new Audio("/audio/20-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 20){
+                                            var snd = new Audio("/audio/21-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 21){
+                                            var snd = new Audio("/audio/22-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 22){
+                                            var snd = new Audio("/audio/23-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 23){
+                                            var snd = new Audio("/audio/24-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 24){
+                                            var snd = new Audio("/audio/25-degrees" + ".mp3");
+                                    snd.play();
+                                        } else if (temp == 25){
+                                            var snd = new Audio("/audio/25-degrees" + ".mp3");
+                                    snd.play();
+                                        }
+                                    });
+
 
                                     $("#temp-right").click(function(){
                                         if (temp <= 24){
@@ -338,6 +423,8 @@
                                             alert("Temperature cannot go above 25");
                                         }
                                     });
+
+
 
                                 </script>
 
