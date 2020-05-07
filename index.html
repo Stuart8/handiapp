@@ -144,7 +144,7 @@
                                     $("#ignition").html(engineStatus + ' <i class="fas fa-chevron-right"></i>');
                                     $("#engine-off").fadeTo("slow", 1);
                                     $("#engine-on").fadeTo("slow", 0.4);
-                                    var snd = new Audio("/audio/vehicle-startup" + ".mp3");
+                                    var snd = new Audio("handiapp/audio/vehicle-startup" + ".mp3");
                                     snd.play();
                                 });
 
@@ -318,17 +318,17 @@
                                 <script>      
 
                                 $("#sos-click").click(function(){
-                                    var snd = new Audio("/audio/emergancy" + ".mp3");
+                                    var snd = new Audio("handiapp/audio/emergancy" + ".mp3");
                                     snd.play();
                                 });
 
                                 $("#refuel-click").click(function(){
-                                    var snd = new Audio("/audio/vehicle-refuel" + ".mp3");
+                                    var snd = new Audio("handiapp/audio/vehicle-refuel" + ".mp3");
                                     snd.play();
                                 });
 
                                 $("#summon-click").click(function(){
-                                    var snd = new Audio("/audio/vehicle-summon" + ".mp3");
+                                    var snd = new Audio("audio/vehicle-summon" + ".mp3");
                                     snd.play();
                                 });
 
