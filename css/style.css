@@ -469,8 +469,7 @@ body{
     background: rgba(0, 0, 0, 0.863);
     border-radius: 50%;
     position: absolute;
-    bottom: 60px;
-    margin: 30px 20px;
+    bottom: 90px;
     border: 5px dashed #919191;
     text-align: center;
 }
@@ -496,6 +495,50 @@ body{
     color: #fff;
     font-family: roboto;
     font-size: 20px;
+    margin: 0;
+}
+
+#speedo-justify{
+    height: auto;
+    overflow: auto;
+    width: 85px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+#speed-limit{
+    width: 55px;
+    height: 55px;
+    background: #fff;
+    border: 5px solid #FE2626;
+    text-align: center;
+    border-radius: 50%;
+    bottom: 190px;
+    position: absolute;
+    display: none;
+}
+
+@media (min-width: 721px) and (min-height: 524px){
+    #speed-limit{
+        display: block;
+    }
+}
+
+#limit{
+    width: 100%;
+    color: #919191;
+    font-family: roboto;
+    font-size: 20px;
+    margin: 0;
+    position: relative;
+}
+
+#limit-unit{
+    width: 100%;
+    color: #919191;
+    font-family: roboto;
+    font-size: 15px;
     margin: 0;
 }
 /* Features Page */
